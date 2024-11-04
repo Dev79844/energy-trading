@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { TextField, FormControl, Button, Typography, Box } from "@mui/material";
-import { Link } from "react-router-dom";
-import Navbar from "../../components/Navigation/Navbar"; // Ensure Navbar is correctly imported
+import { Link, useNavigate } from "react-router-dom";
+import Navbar from "../../components/Navigation/Navbar";
 
 const UserSignup = () => {
     //modify accordingly
@@ -10,24 +10,29 @@ const UserSignup = () => {
     const [emailError, setEmailError] = useState(false);
     const [passwordError, setPasswordError] = useState(false);
 
+    const navigate = useNavigate();
+
     //modify accordingly
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        setEmailError(false);
-        setPasswordError(false);
+        localStorage.setItem("token", "12345");
+        localStorage.setItem("email", email);
+        navigate("/user/dashboard");
+        // setEmailError(false);
+        // setPasswordError(false);
 
-        if (email === '') {
-            setEmailError(true);
-        }
-        if (password === '') {
-            setPasswordError(true);
-        }
+        // if (email === '') {
+        //     setEmailError(true);
+        // }
+        // if (password === '') {
+        //     setPasswordError(true);
+        // }
 
-        if (email && password && (!passwordError && !emailError)) {
-            console.log(email, password);
-            // Perform login logic here
-        }
+        // if (email && password && (!passwordError && !emailError)) {
+        //     console.log(email, password);
+        //     // Perform login logic here
+        // }
     };
 
     return (
