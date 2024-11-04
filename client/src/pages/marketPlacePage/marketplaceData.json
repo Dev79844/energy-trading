@@ -1,0 +1,27 @@
+[
+    {
+        "email": "seller1@example.com",
+        "numberOfUnits": 100,
+        "amountQuoted": 500
+    },
+    {
+        "email": "seller2@example.com",
+        "numberOfUnits": 250,
+        "amountQuoted": 1200
+    },
+    {
+        "email": "seller3@example.com",
+        "numberOfUnits": 150,
+        "amountQuoted": 750
+    },
+    {
+        "email": "seller4@example.com",
+        "numberOfUnits": 300,
+        "amountQuoted": 1800
+    },
+    {
+        "email": "seller5@example.com",
+        "numberOfUnits": 50,
+        "amountQuoted": 250
+    }
+]
