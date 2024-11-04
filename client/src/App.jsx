@@ -5,7 +5,7 @@ import Landing from './pages/landing';
 import UserDashboard from './pages/userDashboard';
 import UserSignup from './pages/userSignup';
 import UserLogin from './pages/userLogin';
-import ProtectedComponent from './components/protectedComponent';
+import ProtectedComponent from './components/RouteManagement/protectedComponent';
 
 function App() {
   return (
