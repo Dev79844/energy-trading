@@ -1,0 +1,32 @@
+[
+    {
+        "partyEmailId": "alpha.traders@example.com",
+        "status": "Buy",
+        "unitsExchanged": 100,
+        "amountSpentINR": 50000
+    },
+    {
+        "partyEmailId": "beta.corp@example.com",
+        "status": "Sell",
+        "unitsExchanged": 50,
+        "amountSpentINR": 25000
+    },
+    {
+        "partyEmailId": "gamma.ltd@example.com",
+        "status": "Buy",
+        "unitsExchanged": 200,
+        "amountSpentINR": 120000
+    },
+    {
+        "partyEmailId": "delta.inc@example.com",
+        "status": "Sell",
+        "unitsExchanged": 150,
+        "amountSpentINR": 75000
+    },
+    {
+        "partyEmailId": "epsilon.llc@example.com",
+        "status": "Buy",
+        "unitsExchanged": 300,
+        "amountSpentINR": 180000
+    }
+]
