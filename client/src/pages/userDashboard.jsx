@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import UserNav from "../components/UserNav";
+import UserNav from "../components/DashboardNavigation/UserNav";
 
 export default function UserDashboard() {
 

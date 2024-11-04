@@ -1,32 +1,57 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import Navbar from "../components/Navbar";
+import React from "react";
+import Navbar from "../components/Navigation/Navbar";
+import { Box, Typography, Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
-export default function Landing() {
+const Landing = () => {
+  return (
+    <div className="min-h-screen flex flex-col bg-gray-900">
+      <Navbar />
 
-    useEffect(() => {
-        //add logic here
-    }, []);
+      <Box 
+        sx={{ 
+          display: 'flex', 
+          flexDirection: 'column', 
+          alignItems: 'center', 
+          justifyContent: 'center', 
+          height: '100vh', // Full viewport height for vertical centering
+          width: '90vw', // Full width for horizontal centering
+          textAlign: "center", 
+          gap: 4,
+          px: 2,
+          ml: 4
+        }}
+      >
+        <div>
+          <Typography variant="h2" sx={{ color: "yellow", fontWeight: 'bold' }} gutterBottom>
+            Energon
+          </Typography>
+          <Typography variant="h6" sx={{ color: "white", mb: 2 }}>
+            Offering secure and reliable energy trading platform to all!
+          </Typography>
+        </div>
+        
+        <Box sx={{ display: 'flex', gap: 2, mt: 2 }}>
+          <Button 
+            variant="contained" 
+            component={Link} 
+            to="/user/login"
+            sx={{ bgcolor: "yellow", color: "black", fontWeight: "bold" }}
+          >
+            Log In
+          </Button>
+          <Button 
+            variant="contained" 
+            component={Link} 
+            to="/user/signup"
+            sx={{ bgcolor: "yellow", color: "black", fontWeight: "bold" }}
+          >
+            Sign Up
+          </Button>
+        </Box>
+      </Box>
+    </div>
+  );
+};
 
-    return (
-        <>
-            <Navbar />
-            <section class="bg-white dark:bg-gray-900">
-                <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-                    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-teal-400">Empowering the world!</h1>
-                    <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-teal-300">Here at Energon, we focus on building secure and reliable energy trading platforms, for all!</p>
-                    <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-                        <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-orange-400 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                            Get Started
-                            <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </a>
-                        <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-orange-400 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                            Already a User?
-                            <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </a>
-                    </div>
-                </div>
-            </section>
-        </>
-    );
-}
+export default Landing;

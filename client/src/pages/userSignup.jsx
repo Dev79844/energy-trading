@@ -17,24 +17,7 @@ export default function UserSignup() {
 
     //modify accordingly
     const onSignup = async () => {
-        try {
-            if (user.password !== user.secpass) {
-                alert("Passwords do not match!");
-            }
-            else {
-                const response = await axios.post(`${BASE_URL[0]}/api/auth/user/signup`, user);
-                if (response.status === 201) {
-                    console.log("Signup success", response.data);
-                    navigate("/user/login");
-                }
-                else {
-                    console.log("Signup Failure!");
-                    alert("Signup Failed!");
-                }
-            }
-        } catch (error) {
-            console.log("Signup failed", error.message)
-        }
+       navigate("/user/login");
     }
 
     return (
