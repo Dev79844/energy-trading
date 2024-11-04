@@ -10,6 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@fontsource/roboto": "^5.1.0",
+    "@mui/icons-material": "^6.1.6",
+    "@mui/material": "^6.1.6",
+    "@mui/styles": "^6.1.6",
+    "@toolpad/core": "^0.8.1",
     "autoprefixer": "^10.4.20",
     "axios": "^1.7.7",
     "postcss-cli": "^11.0.0",
