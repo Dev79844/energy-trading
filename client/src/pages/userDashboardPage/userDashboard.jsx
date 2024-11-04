@@ -6,7 +6,7 @@ export default function UserDashboard() {
 
     useEffect(() => {
         //add logic here
-    }, []);
+    });
 
     //to modify
     return (
