@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import './App.css';
-import Landing from './pages/landing';
-import UserDashboard from './pages/userDashboard';
-import UserSignup from './pages/userSignup';
-import UserLogin from './pages/userLogin';
+import Landing from './pages/landingPage/landing';
+import UserDashboard from './pages/userDashboardPage/userDashboard';
+import UserSignup from './pages/signupPage/userSignup';
+import UserLogin from './pages/loginPage/userLogin';
 import ProtectedComponent from './components/RouteManagement/protectedComponent';
 
 function App() {

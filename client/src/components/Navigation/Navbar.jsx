@@ -48,18 +48,21 @@ export default function Navbar() {
         boxShadow: 0,
         bgcolor: 'yellow',
         backgroundImage: 'none',
-        mt: 'calc(var(--template-frame-height, 0px) + 28px)',
+        mt: 'calc(var(--template-frame-height, 0px) + 10px)',
       }}
     >
       <Container maxWidth="lg">
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
             <TipsAndUpdatesIcon sx={{ color: 'black' }} />
-            <Container sx={{ color: 'black', fontSize: 20 }}>
-              <Link to="/">
-                Energon
-              </Link>
-            </Container>
+            <Button
+              variant="text"
+              component={Link}
+              to="/"
+              sx={{ bgcolor: "yellow", color: "black", fontWeight: "bold" }}
+            >
+              E2
+            </Button>
           </Box>
           <Box
             sx={{
@@ -68,12 +71,22 @@ export default function Navbar() {
               alignItems: 'center',
             }}
           >
-            <ListItem color="primary" variant="text" size="small">
-              <Link to="/user/login">Login</Link>
-            </ListItem>
-            <ListItem color="primary" variant="text" size="small">
-              <Link to="/user/signup">New?</Link>
-            </ListItem>
+            <Button
+              variant="text"
+              component={Link}
+              to="/user/login"
+              sx={{ bgcolor: "yellow", color: "black", fontWeight: "bold" }}
+            >
+              Sign In
+            </Button>
+            <Button
+              variant="text"
+              component={Link}
+              to="/user/signup"
+              sx={{ bgcolor: "yellow", color: "black", fontWeight: "bold" }}
+            >
+              Sign Up
+            </Button>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' }, gap: 1 }}>
             <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>
@@ -102,12 +115,12 @@ export default function Navbar() {
                 </Box>
                 <MenuItem>
                   <Link to="/user/login" color="primary" variant="text" size="small">
-                    Login
+                    Sign In
                   </Link>
                 </MenuItem>
                 <MenuItem>
                   <Link to="/user/signup" color="primary" variant="text" size="small">
-                    New?
+                    Sign Up
                   </Link>
                 </MenuItem>
               </Box>
