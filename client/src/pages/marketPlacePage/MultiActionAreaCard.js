@@ -16,7 +16,7 @@ export default function MultiActionAreaCard({ item, onBuy }) {
           Units Available: {item.numberOfUnits}
         </Typography>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          Amount Quoted: ${item.amountQuoted}
+          Amount Quoted: ₹{item.amountQuoted}
         </Typography>
       </CardContent>
       <CardActions>
