@@ -40,7 +40,7 @@ const energySale = () => {
 
     return (
         <>
-            <Navbar />
+            <UserNav />
             <Box
                 sx={{
                     display: "flex",
